@@ -5,7 +5,10 @@ import matplotlib.animation as animation
 G = 6.6743e-11
 dt = 24 * 36000
 steps = 1000
-
+colours = [
+    'blue', 'red', 'green', 'orange', 'purple', 'cyan', 'magenta',
+    'yellow', 'pink', 'lime', 'teal', 'coral', 'navy'
+]
 # initial values
 # could add UI for this in future
 #Sun, mercury, venus, earth, mars, jupiter, saturn, uranus, pluto
@@ -45,7 +48,7 @@ def update_pos_vel(positions, velocities, masses):
 #plot in matplotlib
 
 fig, ax = plt.subplots()
-scat = ax.scatter(positions[:,0], positions[:,1], s=10)
+scat = ax.scatter(positions[:,0], positions[:,1], c=colours[:len(masses)], s=10)
 
 ax.set_xlim(-1e12, 1e12)
 ax.set_ylim(-1e12, 1e12)
