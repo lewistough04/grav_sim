@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
-from mpl_toolkits.mplot3d import Axes3D
 
 G = 6.6743e-11
 dt = 24 * 36000
@@ -12,13 +11,13 @@ colours = [
 ]
 # initial values
 # could add UI for this in future
-#Sun, mercury, venus, earth, mars, jupiter, saturn, uranus, pluto
-#mass (kg)
-#1.989e30, 3.3e23, 4.87e24, 5.97e24, 6.42e23, 1.90e27, 5.68e26, 8.68e25, 1.02e26
-#vel (m/s)
-#0, 4.787e4, 3.502e4, 2.978e4, 2.407e4, 1.307e4, 9.690e3, 6.810e3, 5.430e3
-#distance from sun (m)
-#0, 5.79e10, 1.08e11, 1.50e11, 2.28e11, 7.78e11, 1.43e12, 2.87e12, 4.50e12
+# Sun, mercury, venus, earth, mars, jupiter, saturn, uranus, pluto
+# mass (kg)
+# 1.989e30, 3.3e23, 4.87e24, 5.97e24, 6.42e23, 1.90e27, 5.68e26, 8.68e25, 1.02e26
+# vel (m/s)
+# 0, 4.787e4, 3.502e4, 2.978e4, 2.407e4, 1.307e4, 9.690e3, 6.810e3, 5.430e3
+# distance from sun (m)
+# 0, 5.79e10, 1.08e11, 1.50e11, 2.28e11, 7.78e11, 1.43e12, 2.87e12, 4.50e12
 masses = np.array([1.989e30,3.3e23, 4.87e24, 5.97e24, 6.42e23, 1.90e27, 5.68e26, 8.68e25, 1.02e26], dtype=np.float64)
 velocities = np.array([[0,0,0], [0, 4.787e4,0], [0,3.502e4,0], [0,2.978e4,0], [0,2.407e4,0], [0,1.307e4,0], [0,9.690e3,0], [0,6.810e3,0], [0,5.430e3,0]], dtype=np.float64)
 positions = np.array([[0,0,0], [5.79e10, 0,0], [1.08e11, 0,0], [1.50e11, 0,0], [2.28e11, 0,0], [7.78e11, 0,0], [1.43e12, 0,0], [2.87e12, 0,0],[4.50e12, 0,0]], dtype=np.float64)
@@ -46,8 +45,7 @@ def update_pos_vel(positions, velocities, masses):
     return positions, velocities
 
 
-
-#plot in matplotlib
+# plot in matplotlib
 
 fig = plt.figure()
 ax = fig.add_subplot(111,projection='3d')
