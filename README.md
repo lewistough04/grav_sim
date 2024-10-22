@@ -18,7 +18,9 @@
 3. Install dependencies:
    ```bash
    pip install -r "requirements.txt"
-
+3. Run Program:
+   ```bash
+   python main.py
 ___
 
 ## Future Plans
